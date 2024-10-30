@@ -2,13 +2,7 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     baseURL: '/learn-from-zero-deploy/',
-    head: {
-      title: 'My Nuxt App',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-      ]
-    }
+    buildAssetsDir: 'assets',
   },
   modules: [
     '@nuxt/content', 
@@ -20,5 +14,12 @@ export default defineNuxtConfig({
     experimental: {
       clientDB: true
     }
+  },
+  build: {
+    transpile: ['@headlessui/vue']  // 如果你使用了 headlessui
+  },
+  components: {
+    global: true,
+    dirs: ['~/components']
   }
 })
