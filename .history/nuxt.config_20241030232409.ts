@@ -13,8 +13,7 @@ export default defineNuxtConfig({
       failOnError: false,  // 防止预渲染错误导致构建失败
       crawlLinks: true,    // 自动爬取所有链接
       routes: ['/'],
-    },
-    debug: true,
+    }
   },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
