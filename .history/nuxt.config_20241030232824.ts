@@ -8,10 +8,7 @@ export default defineNuxtConfig({
     prerender: {
       failOnError: false,
       crawlLinks: true,
-      routes: [
-        '/',
-        '/python-zero'
-      ],
+      routes: ['/'],
     },
     debug: true,
   },
@@ -23,11 +20,10 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
     }
   },
+  compatibilityDate: '2024-04-03',
+  devtools: { enabled: true },
   modules: [
-    '@nuxt/content', 
-    '@nuxtjs/tailwindcss', 
-    '@nuxtjs/color-mode', 
-    '@pinia/nuxt'
+    '@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@pinia/nuxt'
   ],
   content: {
     markdown: {
@@ -40,12 +36,7 @@ export default defineNuxtConfig({
         dark: 'github-dark',
         light: 'github-light',
       }
-    },
-    experimental: {
-      clientDB: true,  // 启用客户端数据库
-      stripQueryParameters: false // 保留查询参数
-    },
-    documentDriven: true  // 启用文档驱动模式
+    }
   },
   colorMode: {
     preference: 'system',

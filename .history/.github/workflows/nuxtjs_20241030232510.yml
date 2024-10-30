@@ -60,11 +60,11 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Static HTML export with Nuxt
-        run: |
-          export NODE_OPTIONS="--trace-warnings --max-old-space-size=4096"
-          export NITRO_DEBUG=1
-          export NODE_ENV=production
-          export DEBUG=nuxt:*  # 添加这行来获取更多 Nuxt 调试信息
-          npm run generate
-        env:
-          NUXT_APP_BASE_URL: "/learn-from-zero-deploy/"
+      run: |
+        export NODE_OPTIONS="--trace-warnings --max-old-space-size=4096"
+        export NITRO_DEBUG=1
+        export NODE_ENV=production
+        export DEBUG=nuxt:*  # 添加这行来获取更多 Nuxt 调试信息
+        npm run generate
+      env:
+        NUXT_APP_BASE_URL: '/learn-from-zero-deploy/'
