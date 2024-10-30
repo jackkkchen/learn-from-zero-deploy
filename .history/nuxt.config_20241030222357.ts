@@ -2,13 +2,9 @@
 import tailwindTypography from '@tailwindcss/typography'
 
 export default defineNuxtConfig({
-  ssr: false, 
   app: {
-    baseURL: '/learn-from-zero-deploy/',
-    buildAssetsDir: 'assets',
-  },
-  nitro: {
-    preset: 'github-pages'
+    baseURL: '/learn-from-zero/', // 添加 GitHub 仓库名
+    buildAssetsDir: 'assets', // 确保资源目录不以 '_' 开头
   },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },

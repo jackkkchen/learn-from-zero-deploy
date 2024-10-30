@@ -2,10 +2,11 @@
 import tailwindTypography from '@tailwindcss/typography'
 
 export default defineNuxtConfig({
-  ssr: false, 
+  ssr: true, // 或 false，取决于你的需求
+  target: 'static',
   app: {
-    baseURL: '/learn-from-zero-deploy/',
-    buildAssetsDir: 'assets',
+    baseURL: '/learn-from-zero-deploy/', // 添加 GitHub 仓库名
+    buildAssetsDir: 'assets', // 确保资源目录不以 '_' 开头
   },
   nitro: {
     preset: 'github-pages'

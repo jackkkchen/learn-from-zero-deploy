@@ -2,7 +2,8 @@
 import tailwindTypography from '@tailwindcss/typography'
 
 export default defineNuxtConfig({
-  ssr: false, 
+  ssr: true,
+  output: 'static',
   app: {
     baseURL: '/learn-from-zero-deploy/',
     buildAssetsDir: 'assets',
