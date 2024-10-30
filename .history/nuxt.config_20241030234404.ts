@@ -12,12 +12,13 @@ export default defineNuxtConfig({
   content: {
     experimental: {
       clientDB: true
-    },
-    navigation: {
-      fields: ['title']
     }
   },
   generate: {
-    routes: ['/']
+    routes: ['/'],
+    fallback: '404.html'
+  },
+  build: {
+    transpile: ['@nuxt/content']
   }
 })
