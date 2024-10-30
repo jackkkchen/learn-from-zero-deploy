@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   },
   generate: {
     routes: ['/'],
+    fallback: true
   },
   hooks: {
     'nitro:config': (nitroConfig) => {
